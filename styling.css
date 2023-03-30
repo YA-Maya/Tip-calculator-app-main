@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;800&display=swap');
+:root{
+    --Strongcyan: hsl(172, 67%, 45%);
+    --Verydarkcyan: hsl(183, 100%, 15%);
+    --Darkgrayishcyan: hsl(186, 14%, 43%);
+    --Grayishcyan: hsl(184, 14%, 56%);
+    --Lightgrayishcyan: hsl(185, 41%, 84%);
+    --Verylightgrayishcyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+    --Family: Space Mono ;
+     --Fontsize : 24px; /*(form inputs) */
+     --Weights: 700;
+}
+html{
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 24px ; /*form inputs */
+    margin: 0;
+    padding:0px;
+    background-color:var(--Lightgrayishcyan) ;
+    font-family: 'Courier New', monospace;
+} 
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+    padding: 0;
+}
+
+.logo{
+    text-align: center;
+    margin-top: 150px;
+}
+/* Mobile: 375px
+Desktop: 1440px */
+.grid-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 15px;
+}
+.total-wrapper{
+    display: grid;
+    grid-template-columns: 1fr ;
+}
+
+.grid-contener{    
+    background-color: black;
+
+  
+}
+.calculter-wrapper{
+    background-color: pink;
+}
+
+.people{
+    background-color: blue;
+}
+
+.Contanter-total{
+    background-color: blueviolet;
+}
+
+
+.reset{
+    background-color: var(--Verydarkcyan);
+}
+
+.total-wrapper{
+    display: grid;
+}
+
+@media screen and ( max-width: 550px){
+    .grid-wrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .total-wrapper{
+        display: grid;
+        grid-template-columns: 1fr ;
+    }
+
+    .logo{
+        text-align: center;
+    }
+
+    .grid-contener{    
+        background-color: black;
+      
+    }
+    .calculter-wrapper{
+        background-color: pink;
+    }
+    
+    .people{
+        background-color: blue;
+    }
+    
+    .Contanter-total{
+        background-color: blueviolet;
+    }
+    
+    
+    .reset{
+        background-color: var(--Verydarkcyan);
+    }
+    
+    .total-wrapper{
+        display: grid;
+    }
+    
+    
+    
+}
