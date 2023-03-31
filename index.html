@@ -6,53 +6,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- displays site properly based on user's device -->
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-    <link rel="stylesheet" href="./styling.css">
+    <link rel="stylesheet" href="./assests/styling.css">
     <title>Frontend Mentor | Tip calculator app</title>
 </head>
 
 <body>
+    <!--Make an header for the logo-->
     <header class="logo">
         <img src="./images/logo.svg" alt="Logo">
     </header>
-    <section class="grid-contener">
+    <!--Main-->
+    <main class="grid-contener">
         <div class="grid-wrapper">
             <div class="calculter-wrapper">
                 <div class="bill-desplay">
                     <p>Bill</p>
-                    <img src="./images/icon-dollar.svg" alt="doller icon onto of the bill">
-                    <input type="input">
+                    <div class="doller-icon">
+                        <img src="./images/icon-dollar.svg" alt="doller icon onto of the bill">
+                        <form action="form-input">
+                            <input type="number" placeholder="Bill" value="Total bill" name="Bill" min="0">
+                        </form>
+                    </div>
                 </div>
+                <div>
+                <p> Select Tip % </p>
                 <div class="tip">
-                    <p> Select Tip % </p>
-                    <button class="button" type="button">5%</button>
-                    <button class="button" type="button">10%</button>
-                    <button class="button" type="button">15%</button>
-                    <button class="button" type="button">25%</button>
-                    <button class="button" type="button">50%</button>
-                    <button class="button" id="Custom" type="button">Custom</button>
+                    <button class="button" type="button" value="5%">5%</button>
+                    <button class="button" type="button" value="10%">10%</button>
+                    <button class="button" type="button" value="15%">15%</button>
+                    <button class="button" type="button" value="25%">25%</button>
+                    <button class="button" type="button" value="50%">50%</button>
+                    <form action="">
+                        <label for="custom" class="sr-only">Custom</label> 
+                        <input  type="number" placeholder="Customs" value="Custom" name="Customs" id="custom" min="0">
+                    </form>
                 </div>
+            </div>
                 <div class="people">
                     <p>Number of people</p>
+                    <div class="people-icon">
                     <img src="./images/icon-person.svg" alt=" A person icon onto of the bill">
-                    <input type="form">
+                    <form action="input-form">
+                        <label for="custom" class="sr-only">number of people</label> 
+                        <input type="number" placeholder="Custom">
+                    </form>
+                </div>
                 </div>
             </div>
 
-            <section class="total-wrapper">
+            <section class="total-box">
                 <div class="Contanter-total">
-                    <h4>Tip Amount</h4>
-                    <p>/ person</p>
-                    <h2>0.00</h2>
-                    <h4>Tip Amount</h4>
-                    <p>/ person</p>
-                    <h2>0.00</h2>
-                    <div>
-                        <button class="reset" type="submit">RESET</button>
-                    </div>
+                    <ul>
+                        <li>Tip Amount</li>
+                        <li>/people</li>
+                    </ul>
+                    <span id="tip-amount">0.00</span>
                 </div>
+                <div class="Contanter-total">
+                    <ul>
+                        <li>Total</li>
+                        <li>/people</li>
+                    </ul>
+                    <span id="total-amount">0.00</span>
+                </div>
+                <div class="submit-button">
+                    <button class="reset" type="submit">RESET</button>
+                </div>
+            </section>
         </div>
-    </section>
-    </section>
+        </div>
+        </section>
+    </main>
+    <script src="./assests/Scrips.js"></script>
 </body>
+<footer>
+    <p> Author: Sumeya Ahmed</p>
+</footer>
 
 </html>
