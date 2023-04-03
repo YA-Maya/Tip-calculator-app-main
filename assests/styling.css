@@ -108,7 +108,7 @@ body{
     color: var(--Very-dark-cyan);
 }
 
-#Custom{
+.Custom{
     background-color: var(--Strong-cyan);
     border-color: var(--Strong-cyan);
     color: var(--very-dark-cyan);
@@ -170,6 +170,16 @@ input:focus{
      padding: 0;
      position: absolute; width: 1px;
     visibility: hidden;
+}
+.error{
+    border: 0;
+    clip: rect(0 0 0 0); 
+    height: 1px; 
+    margin: -1px; 
+    overflow: hidden;
+    padding: 0;
+    position: absolute; width: 0px;
+   visibility: hidden;
 }
 /* Total box */
 .total-box{

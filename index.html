@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- displays site properly based on user's device -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <link rel="stylesheet" href="./assests/styling.css">
     <title>Frontend Mentor | Tip calculator app</title>
 </head>
@@ -24,21 +24,21 @@
                     <div class="doller-icon">
                         <img src="./images/icon-dollar.svg" alt="doller icon onto of the bill">
                         <form action="form-input">
-                            <input type="number" placeholder="Bill" value="Total bill" name="Bill" min="0">
+                            <input id="bill-input" class="inputAmount" type="number" placeholder="bill"  name="Bill" min="0">
                         </form>
                     </div>
                 </div>
                 <div>
                 <p> Select Tip % </p>
                 <div class="tip">
-                    <button class="button" type="button" value="5%">5%</button>
-                    <button class="button" type="button" value="10%">10%</button>
-                    <button class="button" type="button" value="15%">15%</button>
-                    <button class="button" type="button" value="25%">25%</button>
-                    <button class="button" type="button" value="50%">50%</button>
+                    <button class="button-5% active-tip" type="button" value="5%">5%</button>
+                    <button class="button-10% active-tip" type="button" value="10%">10%</button>
+                    <button class="button-15% active-tip" type="button" value="15%">15%</button>
+                    <button class="button-25% active-tip" type="button" value="25%">25%</button>
+                    <button class="button-50% active-tip" type="button" value="50%">50%</button>
                     <form action="">
                         <label for="custom" class="sr-only">Custom</label> 
-                        <input  type="number" placeholder="Customs" value="Custom" name="Customs" id="custom" min="0">
+                        <input id="tip-custom" class="custom"  type="number" placeholder="Customs"  name="Customs"  min="0">                   
                     </form>
                 </div>
             </div>
@@ -48,7 +48,8 @@
                     <img src="./images/icon-person.svg" alt=" A person icon onto of the bill">
                     <form action="input-form">
                         <label for="custom" class="sr-only">number of people</label> 
-                        <input type="number" placeholder="Custom">
+                        <label for="" class="error">Can't be zero</label>
+                        <input id="people-input" type="number" placeholder="Custom"    min="0">
                     </form>
                 </div>
                 </div>
@@ -60,14 +61,14 @@
                         <li>Tip Amount</li>
                         <li>/people</li>
                     </ul>
-                    <span id="tip-amount">0.00</span>
+                    <span id="tip-amount">4.27</span>
                 </div>
                 <div class="Contanter-total">
                     <ul>
                         <li>Total</li>
                         <li>/people</li>
                     </ul>
-                    <span id="total-amount">0.00</span>
+                    <span id="total-amount">32.79</span>
                 </div>
                 <div class="submit-button">
                     <button class="reset" type="submit">RESET</button>
@@ -80,7 +81,7 @@
     <script src="./assests/Scrips.js"></script>
 </body>
 <footer>
-    <p> Author: Sumeya Ahmed</p>
+    <p> Coded by: Sumeya Ahmed</p>
 </footer>
 
 </html>
