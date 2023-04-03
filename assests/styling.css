@@ -134,6 +134,7 @@ input:focus{
     border: 3px sold var(--Strong-cyan) !important ;
     outline: none;
 }
+
 /* people */
 .people{
     margin-top: 10px;
@@ -179,7 +180,7 @@ input:focus{
     overflow: hidden;
     padding: 0;
     position: absolute; width: 0px;
-   visibility: hidden;
+    visibility: hidden;
 }
 /* Total box */
 .total-box{
