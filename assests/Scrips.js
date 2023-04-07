@@ -8,9 +8,19 @@ const resetBtn = document.querySelector(".reset");
 const error = document.querySelector(".error");
 const tipButtons = document.querySelectorAll(".button");
 
+// Event listeners
+billInput.addEventListener("input", billInputFun);
+peopleInput.addEventListener("input", billInputFun);
+tipButtons.forEach((btn) => {
+  btn.addEventListener('click', handleClick);
+
+});
+tipCustom.addEventListener('input', tipCustomVal);
+resetBtn.addEventListener('click', reset);
+
 // Set initial values for the input elements and result displays
-billInput.value = "0.00"; 
-peopleInput.value = "1"; 
+billInput.value = "0.00";
+peopleInput.value = "1";
 tipPerPerson.innerHTML = "£" + (0.0).toFixed(2);
 totalPerPerson.innerHTML = "£" + (0.0).toFixed(2);
 
@@ -26,13 +36,25 @@ function billInputFun() {
   console.log(billValue);
   peopleValue = parseFloat(peopleInput.value);
   if (peopleValue <= 0) {
-    error.innerHTML = 'number must be greater than zero';
+    error.innerHTML = 'Can not be zero';
     setTimeout(function () {
       error.innerHTML = '';
     }, 2000);
   }
   calculateTip();
-}
+};
+
+function peopleInputFun() {
+  peopleValue = parseFloat(peopleInput.value);
+  if (peopleValue < 1) {
+    error.style.display = 'flex'
+    peopleInput.style.border = 'thick sold red'
+  } else {
+    error.style.display = 'none'
+    peopleInput.style.border = 'none'
+    calculateTip();
+  };
+};
 
 function handleClick(event) {
   tipButtons.forEach(function (val) {
@@ -54,7 +76,7 @@ function tipCustomVal() {
     });
     calculateTip();
   }
-}
+};
 
 function calculateTip() {
   if (peopleValue >= 1) {
@@ -62,26 +84,15 @@ function calculateTip() {
     let total = (billValue + tipAmount) / peopleValue;
     tipPerPerson.innerHTML = "£" + tipAmount.toFixed(2);
     totalPerPerson.innerHTML = "£" + total.toFixed(2);
-    console.log(billValue);
-    console.log(tipAmount);
+
   }
-}
-
-// Event listeners
-billInput.addEventListener("input", billInputFun);
-peopleInput.addEventListener("input", billInputFun);
-tipButtons.forEach((btn) => {
-  btn.addEventListener('click', handleClick);
-});
-tipCustom.addEventListener('input', tipCustomVal);
-resetBtn.addEventListener('click', reset);
-
+};
 // Function that resets the input values and result displays to their initial states
-function reset(){
-    billInput.value = "0.00";
-    peopleInput.value ="1";
-    tipCustom.value = "";
-    tipCustom.value = "";
-    billInputFun();
-    tipCustomVal();
+function reset() {
+  billInput.value = "0.00";
+  // peopleInput.value ="1";
+  tipCustom.value = "";
+  tipCustom.value = "";
+  billInputFun();
+  tipCustomVal();
 };

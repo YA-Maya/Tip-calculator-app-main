@@ -1,3 +1,4 @@
+/*import the font*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;800&display=swap');
 
 /*Root*/
@@ -32,7 +33,7 @@ body{
     color: var(--Dark-grayish-cyan);
     font-family:var(--san)
 } 
-
+/*The body end here*/
 
 /* Logo*/
 .logo{
@@ -55,7 +56,6 @@ body{
     margin-top: 15px;
 }
 
-
 /*Main*/
 .bill-desplay{
     display: flex;
@@ -66,7 +66,6 @@ body{
 .doller-icon img{
     position: absolute;
     margin: 15px 0 0 20px;
-  
 }
 
 .doller-icon form input{
@@ -108,6 +107,10 @@ body{
     color: var(--Very-dark-cyan);
 }
 
+/*The button section end here*/
+
+/*The input*/
+
 .Custom{
     background-color: var(--Strong-cyan);
     border-color: var(--Strong-cyan);
@@ -135,9 +138,27 @@ input:focus{
     outline: none;
 }
 
-/* people */
+/*The input section end here*/
+
+/* people section */
 .people{
     margin-top: 10px;
+}
+
+
+.people input{
+    border-radius: 6px;
+    border: 1px solid var(--Very-dark-cyan);
+    color:var(--Very-dark-cyan);
+    border-color: var(--very-light-grayish-cyan);
+    cursor: pointer;
+    font-family: var(--sans);
+    text-align: end;
+    font-size: var(--font-size);
+    min-width: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0px;  
 }
 
 
@@ -158,10 +179,10 @@ input:focus{
     font-family: var(--san);
     font-size: 20px;
     color: var(--Very-dark-cyan);
-
 }
+/*The people section end here*/
 
-/*Make the text 'custom' disappear*/
+/*Make the text 'custom' and the 'number of people' disappear*/
 .sr-only{
     border: 0;
      clip: rect(0 0 0 0); 
@@ -172,17 +193,16 @@ input:focus{
      position: absolute; width: 1px;
     visibility: hidden;
 }
-.error{
-    border: 0;
-    clip: rect(0 0 0 0); 
-    height: 1px; 
-    margin: -1px; 
-    overflow: hidden;
-    padding: 0;
-    position: absolute; width: 0px;
-    visibility: hidden;
+
+.input-form{
+    display: flex;
+    justify-content: space-between;
 }
-/* Total box */
+.error{
+    color: red;
+    border: 0;
+}
+/* Total box section*/
 .total-box{
     display: grid;
     grid-template-columns: 1fr ;
@@ -194,9 +214,7 @@ input:focus{
 
 .tip-amount{
     color: var(--White);
-
 }
-
 .Contanter-total{
     display: flex;
     flex-direction: row;
@@ -218,9 +236,9 @@ input:focus{
     font-size: 40px;
 }
 
+/*The total box section end here */
 
 /*Submit button*/
-
  .submit-button button{
     margin: 10px;
     padding: 5px;
@@ -242,8 +260,9 @@ input:focus{
 .submit-button .reset{
     align-items: center;
 }
+/*The submit button end here*/
 
-
+/*The footer*/
 footer{
     margin-top: 200px;
 }
@@ -251,6 +270,7 @@ footer p{
     text-align: center;
 }
 
+/*The footer end here*/
 /*media query*/
 @media screen and ( max-width: 550px){
     .grid-wrapper{
@@ -347,7 +367,6 @@ footer p{
     .people{
         margin-top: 10px;
     }
-    
     
     .people-icon img{
         position: absolute;
@@ -450,3 +469,6 @@ footer p{
     
     
 }
+/*The media query end here*/
+
+/*My styping file end here*/
