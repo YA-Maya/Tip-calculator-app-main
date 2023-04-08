@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;800&display=swap');
 
 /*Root*/
-:root{
+:root {
     --Strong-cyan: hsl(172, 67%, 45%);
     --Very-dark-cyan: hsl(183, 100%, 15%);
     --Dark-grayish-cyan: hsl(186, 14%, 43%);
@@ -10,42 +10,47 @@
     --Light-grayish-cyan: hsl(185, 41%, 84%);
     --Very-light-grayish-cyan: hsl(189, 41%, 97%);
     --White: hsl(0, 0%, 100%);
-    --Family: Space Mono ;
+    --Family: Space Mono;
     --san: 'space mono';
-     --Weights: 700;
-     --font-size: 24px ;
-     --font-size-mobile:30px;
-     
+    --Weights: 700;
+    --font-size: 24px;
+    --font-size-mobile: 30px;
+
 }
-html{
+
+html {
     box-sizing: border-box;
 }
-p{
+
+p {
     font-family: var(--Family);
 }
+
 /*Body*/
 
-body{
-    font-size: 24px ; /*form inputs */
+body {
+    font-size: 24px;
+    /*form inputs */
     margin: 0;
     padding: 0;
-    background-color:var(--Light-grayish-cyan) ;
+    background-color: var(--Light-grayish-cyan);
     color: var(--Dark-grayish-cyan);
-    font-family:var(--san)
-} 
+    font-family: var(--san)
+}
+
 /*The body end here*/
 
 /* Logo*/
-.logo{
+.logo {
     text-align: center;
-    margin-top: 150px;
+    margin-top: 1.7rem;
+    margin-bottom: 2.3rem;
 }
 
 /*Logo end here*/
 
 /*Grid*/
-
-.grid-wrapper{
+.grid-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
@@ -57,41 +62,43 @@ body{
 }
 
 /*Main*/
-.bill-desplay{
+.bill-desplay {
     display: flex;
     flex-direction: column;
-    margin: 10px ;
+    margin: 10px;
 
 }
-.doller-icon img{
+
+.doller-icon img {
     position: absolute;
     margin: 15px 0 0 20px;
 }
 
-.doller-icon form input{
+.doller-icon form input {
     text-align: center;
     width: 95%;
     text-align: end;
     border: 5px solid var(--Very-light-grayish-cyan);
-    background-color:var(--Very-light-grayish-cyan);
+    background-color: var(--Very-light-grayish-cyan);
     border-radius: 4px;
     padding: 9px;
     min-width: 0;
     font-family: var(--san);
     font-size: 20px;
-    color:  var(--Very-dark-cyan);
+    color: var(--Very-dark-cyan);
     z-index: 0;
 
 }
+
 /*Buttons*/
-.tip{
+.tip {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     gap: 1rem;
 }
 
-.tip button{
+.tip button {
     padding: 5px;
     border-radius: 5px;
     border: 1px solid var(--Very-dark-cyan);
@@ -101,26 +108,27 @@ body{
     font-size: var(--font-size);
     cursor: pointer;
 }
-.tip button:hover{
+
+.tip button:hover {
     background-color: var(--Strong-cyan);
     border-color: var(--Strong-cyan);
     color: var(--Very-dark-cyan);
 }
 
-/*The button section end here*/
 
-/*The input*/
+/*The tip input*/
 
-.Custom{
+.Custom {
     background-color: var(--Strong-cyan);
     border-color: var(--Strong-cyan);
     color: var(--very-dark-cyan);
 }
 
-.tip input{
+/*Custome Input*/
+.tip input {
     border-radius: 6px;
     border: 1px solid var(--Very-dark-cyan);
-    color:var(--Very-dark-cyan);
+    color: var(--Very-dark-cyan);
     border-color: var(--very-light-grayish-cyan);
     cursor: pointer;
     font-family: var(--sans);
@@ -129,27 +137,28 @@ body{
     min-width: 0;
     width: 100%;
     height: 100%;
-    padding: 0px;     
+    padding: 0px;
+
 }
 
 
-input:focus{
-    border: 3px sold var(--Strong-cyan) !important ;
+input:focus {
+    border: 3px sold var(--Strong-cyan) !important;
     outline: none;
 }
 
 /*The input section end here*/
+/*The button section end here*/
 
 /* people section */
-.people{
+.people {
     margin-top: 10px;
 }
 
-
-.people input{
+.people input {
     border-radius: 6px;
     border: 1px solid var(--Very-dark-cyan);
-    color:var(--Very-dark-cyan);
+    color: var(--Very-dark-cyan);
     border-color: var(--very-light-grayish-cyan);
     cursor: pointer;
     font-family: var(--sans);
@@ -158,64 +167,71 @@ input:focus{
     min-width: 0;
     width: 100%;
     height: 100%;
-    padding: 0px;  
+    padding: 0px;
 }
 
-
-.people-icon img{
+.people-icon img {
     position: absolute;
-    margin: 25px 0 0 10px;
+    margin: 35px 0 0 10px;
 }
 
-.people-icon form input{
+/*People Input*/
+.people-icon form input {
     text-align: center;
     width: 95%;
     text-align: end;
     border: 2px solid var(--very-light-grayish-cyan);
-    background-color: var(--very-light-grayish-cyan);
+    background-color: var(--Very-light-grayish-cyan);
     border-radius: 4px;
     padding: 9px;
     min-width: 0;
     font-family: var(--san);
     font-size: 20px;
     color: var(--Very-dark-cyan);
+    z-index: 0;
+
 }
+
 /*The people section end here*/
 
 /*Make the text 'custom' and the 'number of people' disappear*/
-.sr-only{
+.sr-only {
     border: 0;
-     clip: rect(0 0 0 0); 
-     height: 1px; 
-     margin: -1px; 
-     overflow: hidden;
-     padding: 0;
-     position: absolute; width: 1px;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
     visibility: hidden;
 }
 
-.input-form{
+.input-form {
     display: flex;
     justify-content: space-between;
 }
-.error{
+
+.error {
     color: red;
     border: 0;
 }
+
 /* Total box section*/
-.total-box{
+.total-box {
     display: grid;
-    grid-template-columns: 1fr ;
+    grid-template-columns: 1fr;
     flex-direction: column;
     background-color: var(--Very-dark-cyan);
     border-radius: 15px;
     color: var(--White);
 }
 
-.tip-amount{
+.tip-amount {
     color: var(--White);
 }
-.Contanter-total{
+
+.Contanter-total {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -223,15 +239,16 @@ input:focus{
     padding: 15px 20px 5px 20px;
 }
 
-.Contanter-total ul{
+.Contanter-total ul {
     list-style: none;
     padding: 0;
 }
 
-.Contanter-total ul li:last-child{
+.Contanter-total ul li:last-child {
     color: var(--Grayish-cyan);
 }
-.Contanter-total span{
+
+.Contanter-total span {
     color: var(--Strong-cyan);
     font-size: 40px;
 }
@@ -239,7 +256,7 @@ input:focus{
 /*The total box section end here */
 
 /*Submit button*/
- .submit-button button{
+.submit-button button {
     margin: 10px;
     padding: 5px;
     height: 50%;
@@ -251,31 +268,35 @@ input:focus{
     font-size: 18px;
     cursor: pointer;
     color: var(--Very-dark-cyan);
-   
+
 }
-.submit-button button:hover{
+
+.submit-button button:hover {
     background-color: var(--Light-grayish-cyan);
     border-color: var(--Light-grayish-cyan);
 }
-.submit-button .reset{
+
+.submit-button .reset {
     align-items: center;
 }
+
 /*The submit button end here*/
 
 /*The footer*/
-footer{
+footer {
     margin-top: 200px;
 }
-footer p{
+
+footer p {
     text-align: center;
 }
 
 /*The footer end here*/
 /*media query*/
-@media screen and ( max-width: 550px){
-    .grid-wrapper{
+@media screen and (max-width: 550px) {
+    .grid-wrapper {
         display: grid;
-        grid-template-columns: 1fr ;
+        grid-template-columns: 1fr;
         grid-template-rows: auto;
         background-color: var(--White);
         border-radius: 18px;
@@ -283,45 +304,47 @@ footer p{
         gap: 1.3rem;
         margin-top: 15px;
     }
-    
-    
+
+
     /*Main*/
-    .bill-desplay{
+    .bill-desplay {
         display: flex;
         flex-direction: column;
-        margin: 10px ;
-    
+        margin: 10px;
+
     }
-    .doller-icon img{
+
+    .doller-icon img {
         position: absolute;
-        margin: 15px 0 0 20px;
-      
+        margin: 25px 0 0 20px;
+
     }
-    
-    .doller-icon form input{
+
+    .doller-icon form input {
         text-align: center;
         width: 95%;
         text-align: end;
         border: 5px solid var(--Very-light-grayish-cyan);
-        background-color:var(--Very-light-grayish-cyan);
+        background-color: var(--Very-light-grayish-cyan);
         border-radius: 4px;
         padding: 9px;
         min-width: 0;
         font-family: var(--san);
         font-size: var(--font-size-mobile);
-        color:  var(--Very-dark-cyan);
+        color: var(--Very-dark-cyan);
         z-index: 0;
-    
+
     }
+
     /*Buttons*/
-    .tip{
+    .tip {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
         gap: 1rem;
     }
-    
-    .tip button{
+
+    .tip button {
         padding: 5px;
         border-radius: 5px;
         border: 1px solid var(--Very-dark-cyan);
@@ -331,49 +354,51 @@ footer p{
         font-size: var(--font-size-mobile);
         cursor: pointer;
     }
-    .tip button:hover{
+
+    .tip button:hover {
         background-color: var(--Strong-cyan);
         border-color: var(--Strong-cyan);
         color: var(--Very-dark-cyan);
     }
-    
-    #Custom{
+
+    #Custom {
         background-color: var(--Strong-cyan);
         border-color: var(--Strong-cyan);
         color: var(--very-dark-cyan);
     }
-    
-    .tip input{
+
+    .tip input {
         border-radius: 6px;
         border: 1px solid var(--Very-dark-cyan);
-        color:var(--Very-dark-cyan);
+        color: var(--Very-dark-cyan);
         border-color: var(--very-light-grayish-cyan);
         cursor: pointer;
         font-family: var(--sans);
-        text-align: end;
+        text-align: center;
         font-size: var(--font-size-mobile);
         min-width: 0;
         width: 100%;
         height: 100%;
-        padding: 0px;     
+        padding: 0px;
     }
-    
-    
-    input:focus{
-        border: 3px sold var(--Strong-cyan) !important ;
+
+
+    input:focus {
+        border: 3px sold var(--Strong-cyan) !important;
         outline: none;
     }
+
     /* people */
-    .people{
+    .people {
         margin-top: 10px;
     }
-    
-    .people-icon img{
+
+    .people-icon img {
         position: absolute;
-        margin: 15px 0 0 10px;
+        margin: 40px 0 0 10px;
     }
-    
-    .people-icon form input{
+
+    .people-icon form input {
         text-align: center;
         width: 95%;
         text-align: end;
@@ -385,59 +410,74 @@ footer p{
         font-family: var(--san);
         font-size: var(--font-size-mobile);
         color: var(--Very-dark-cyan);
-    
+
     }
-    
-  /*Make the text 'custom' disappear for mobile version*/
-    .sr-only{
+
+    /*Make the text 'custom' disappear for mobile version*/
+    .sr-only {
         border: 0;
-         clip: rect(0 0 0 0); 
-         height: 1px; 
-         margin: -1px; 
-         overflow: hidden;
-         padding: 0;
-         position: absolute; width: 1px;
-         visibility: hidden;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+        visibility: hidden;
     }
+
     /* Total box */
-    .total-box{
+    .total-box {
         display: grid;
-        grid-template-columns: 1fr ;
+        grid-template-columns: 1fr;
         flex-direction: column;
         background-color: var(--Very-dark-cyan);
         border-radius: 15px;
         color: var(--White);
     }
-    
-    .tip-amount{
-        color: var(--White);
-    
+
+    .input-form {
+        display: flex;
+        justify-content: space-between;
     }
-    
-    .Contanter-total{
+
+    .error {
+        color: red;
+        border: 0;
+    }
+
+
+
+    .tip-amount {
+        color: var(--White);
+
+    }
+
+    .Contanter-total {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         padding: 15px 20px 5px 20px;
     }
-    
-    .Contanter-total ul{
+
+    .Contanter-total ul {
         list-style: none;
         padding: 0;
     }
-    
-    .Contanter-total ul li:last-child{
+
+    .Contanter-total ul li:last-child {
         color: var(--Grayish-cyan);
     }
-    .Contanter-total span{
+
+    .Contanter-total span {
         color: var(--Strong-cyan);
         font-size: 40px;
     }
-    
+
     /*Submit button*/
-    
-     .submit-button button{
+
+    .submit-button button {
         margin: 10px;
         padding: 5px;
         height: 60%;
@@ -449,26 +489,30 @@ footer p{
         font-size: var(--font-size-mobile);
         cursor: pointer;
         color: var(--Very-dark-cyan);
-       
+
     }
-    .submit-button button:hover{
+
+    .submit-button button:hover {
         background-color: var(--Light-grayish-cyan);
         border-color: var(--Light-grayish-cyan);
     }
-    .submit-button .reset{
+
+    .submit-button .reset {
         align-items: center;
     }
 
-    
-footer{
-    margin-top: 200px;
+
+    footer {
+        margin-top: 200px;
+    }
+
+    footer p {
+        text-align: center;
+    }
+
+
 }
-footer p{
-    text-align: center;
-}
-    
-    
-}
+
 /*The media query end here*/
 
 /*My styping file end here*/

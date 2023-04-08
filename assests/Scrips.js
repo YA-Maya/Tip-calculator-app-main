@@ -44,6 +44,7 @@ function billInputFun() {
   calculateTip();
 };
 
+
 function peopleInputFun() {
   peopleValue = parseFloat(peopleInput.value);
   if (peopleValue < 1) {
